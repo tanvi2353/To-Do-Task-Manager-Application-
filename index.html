@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="A clean and responsive browser-based To-Do List app with local storage.">
+  <title>My Tasks — To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<aside><div class="brand"><span>✓</span> My Tasks</div><div class="copy">Small steps, big progress ✨</div><div class="nav">☷ &nbsp; All Tasks <b id="sideAll">0</b></div><div class="nav">✓ &nbsp; Completed <b id="sideDone">0</b></div><div class="quote">“A clear list<br>makes a clear mind.”</div></aside>
+<main>
+<header class="top"><div><div class="hello">Good afternoon 👋</div><h1>My Tasks</h1><p>Stay organized, one task at a time.</p></div><button class="theme" id="theme">☀</button></header>
+<section class="stats">
+<div class="progress"><div class="ring" id="ring"><b id="pct">0%</b></div><div><small>YOUR PROGRESS</small><h3><span id="done">0</span> of <span id="total">0</span> completed</h3><p id="msg">Let's get your first task done!</p></div></div>
+<div class="stat"><b id="ts">0</b><small>Total Tasks</small></div><div class="stat"><b id="ds">0</b><small>Completed</small></div><div class="stat"><b id="ps">0</b><small>Pending</small></div>
+</section>
+<section><div class="head"><div><h2>Pending <span id="pb">0</span></h2><p>Things waiting for you</p></div></div><div id="pending"></div>
+<div id="completedBox" class="hidden"><div class="head"><div><h2>Completed <span id="cb">0</span></h2><p>Nice work — keep going!</p></div><button class="clear" id="clear">Clear Completed</button></div><div id="completed"></div></div>
+<div id="empty" class="empty"><div class="emptyIcon">✓</div><h2>No tasks yet</h2><p>Add your first task and get things done.</p><button class="primary" id="emptyAdd">＋ Add Task</button></div></section>
+</main>
+<button class="fab" id="add">＋</button>
+<div class="backdrop hidden" id="addModal"><div class="modal"><button class="x" id="close">×</button><div class="modalIcon">✓</div><h2>Add a new task</h2><p>What would you like to get done?</p><input id="input" placeholder="Enter your task title..." maxlength="140"><small class="error" id="err"></small><div class="actions"><button id="cancel">Cancel</button><button class="primary" id="save">Add Task</button></div></div></div>
+<div class="backdrop hidden" id="confirm"><div class="modal small"><div class="modalIcon">!</div><h2 id="confirmTitle">Delete this task?</h2><p id="confirmText">This action can't be undone.</p><div class="actions"><button id="confirmCancel">Cancel</button><button class="danger" id="confirmOK">Delete</button></div></div></div>
+<div id="toast"></div>
+  <script src="script.js"></script>
+
+</body>
+</html>

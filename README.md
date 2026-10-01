@@ -2,6 +2,8 @@
 
 A clean, responsive, browser-based To-Do List application built with **HTML, CSS, and JavaScript**.
 
+✉️Live Demo :-https://smart-task-manager-alpha-two.vercel.app/
+
 ## ✨ Features
 
 - Add new tasks
